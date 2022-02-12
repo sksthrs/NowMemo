@@ -16,6 +16,42 @@ body {
   font-family: sans-serif;
 }
 
+/* ==================== Generic classes ==================== */
+
+.black-white {
+  color: black;
+  background-color: white;
+}
+
+.white-black {
+  color: white;
+  background-color: black;
+}
+
+.yellow-blue {
+  color: yellow;
+  background-color: #000050;
+}
+
+/* ==================== Button Colors ==================== */
+
+button.expand {
+  color: black;
+  background-color: #FFC0C0;
+}
+
+button.shrink {
+  color: black;
+  background-color: #80FFFF;
+}
+
+button.misc {
+  color: black;
+  background-color: #80FF80;
+}
+
+/* ==================== Specific styles ==================== */
+
 #text {
   position: absolute;
   top: 0;
@@ -41,7 +77,7 @@ body {
 }
 
 #text-toolbar button {
-  width: 2em;
+  width: 15vh; /* 6 buttons in the toolbar */
   margin: 0;
   padding: 2px;
   font-size: 36px; /* large enough on smartphones */
@@ -53,8 +89,6 @@ body {
   margin: 0;
   padding: 0 0.1em; /* side padding is to show caret at the head of the line */
   font-size: 36pt;
-  background-color: white;
-  color: black;
 }
 
 #text-content:disabled {
