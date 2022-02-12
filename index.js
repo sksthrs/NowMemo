@@ -1,3 +1,16 @@
+// Registering Service Worker for making this as PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+    .then((registration) => {
+      console.log(`[Main] ServiceWorker registration finished. Scope:${registration.scope}`);
+    })
+    .catch((reason) => {
+      console.log(`[Main] ServiceWorker registratio failed. Reason:${reason}`);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', (ev) => {
   const clearButton = document.getElementById('text-toolbar-clear')
   const lockButton = document.getElementById('text-toolbar-lock')
