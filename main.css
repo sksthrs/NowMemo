@@ -17,6 +17,13 @@ body {
   touch-action: manipulation; /* disable double-tap action (mishandled on font-size changes) */
 }
 
+/* ==================== Safari Specials ==================== */
+
+input:disabled {
+  -webkit-appearance: none;
+  opacity: 1;
+}
+
 /* ==================== Generic classes ==================== */
 
 .black-white {
