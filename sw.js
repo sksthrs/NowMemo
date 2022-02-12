@@ -1,4 +1,4 @@
-const cacheName = 'NowMemo-v1.0.0'
+const cacheName = 'NowMemo-v1.1.0'
 const cacheUrls = [
   './',
   'index.html',
@@ -21,14 +21,19 @@ self.addEventListener('install', (ev) => {
 })
 
 self.addEventListener('fetch', (ev) => {
+  // network first, cache second
   e.respondWith((async () => {
-    const r = await cache.match(ev.request)
-    console.log(`[Service Worker] Fetching resource : ${ev.request.url}`)
-    if (r) return r
-    const response = await fetch(ev.request)
-    const cache = await caches.open(cacheName)
-    console.log(`[Service Worker] Caching new resource : ${ev.request.url}`)
-    cache.put(e.request, response.clone())
-    return response
+    try
+    {
+      const response = await fetch(ev.request)
+      const cache = await caches.open(cacheName)
+      cache.put(e.request, response.clone())
+      return response
+    }
+    catch (error)
+    {
+      const r = await caches.match(ev.request)
+      if (r) return r
+    }
   })())
 })
