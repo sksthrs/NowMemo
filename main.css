@@ -14,6 +14,7 @@ body {
   border: none;
   background-color: black;
   font-family: sans-serif;
+  touch-action: manipulation; /* disable double-tap action (mishandled on font-size changes) */
 }
 
 /* ==================== Generic classes ==================== */
@@ -89,11 +90,6 @@ button.misc {
   margin: 0;
   padding: 0 0.1em; /* side padding is to show caret at the head of the line */
   font-size: 36pt;
-}
-
-#text-content:disabled {
-  background-color: white;
-  color: black;
 }
 
 .rotate-forward {
