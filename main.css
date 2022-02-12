@@ -19,7 +19,7 @@ body {
 
 /* ==================== Safari Specials ==================== */
 
-input:disabled {
+input:disabled , textarea:disabled {
   -webkit-appearance: none;
   opacity: 1;
 }
