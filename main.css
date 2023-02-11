@@ -69,7 +69,6 @@ button.misc {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  font-family: sans-serif;
 }
 
 #text-toolbar {
@@ -97,6 +96,7 @@ button.misc {
   flex-shrink: 1;
   margin: 0;
   padding: 0 0.1em; /* side padding is to show caret at the head of the line */
+  font-family: sans-serif;
   font-size: 36pt;
 }
 
