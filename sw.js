@@ -1,4 +1,4 @@
-const cacheName = 'NowMemo-v1.1.1'
+const cacheName = 'NowMemo-v1.1.2'
 const cacheUrls = [
   './',
   'index.html',
@@ -28,12 +28,18 @@ self.addEventListener('fetch', (ev) => {
       const response = await fetch(ev.request)
       const cache = await caches.open(cacheName)
       cache.put(ev.request, response.clone())
+      console.log(`fetched : ${ev.request.url}`)
       return response
     }
     catch (error)
     {
       const r = await caches.match(ev.request)
-      if (r) return r
+      if (r) {
+        console.log(`found in cache : ${ev.request.url}`)
+        return r
+      } else {
+        console.log(`not available : ${ev.request.url}`)
+      }
     }
   })())
 })
