@@ -69,6 +69,7 @@ button.misc {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-family: sans-serif;
 }
 
 #text-toolbar {
@@ -85,7 +86,7 @@ button.misc {
 }
 
 #text-toolbar button {
-  width: 15vh; /* 6 buttons in the toolbar */
+  width: 15vw; /* 6 buttons in the toolbar */
   margin: 0;
   padding: 2px;
   font-size: 36px; /* large enough on smartphones */
