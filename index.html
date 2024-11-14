@@ -11,7 +11,7 @@
   <meta property="og:description" content="今すぐ書いて伝えるための、保存機能のないメモ">
   <meta property="og:image" content="apple-touch-icon.png">
   <!-- for apple devices... -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="NowMemo">
   <!-- end of 'for apple devices' -->
@@ -22,14 +22,15 @@
 <body>
   <div id="text">
     <div id="text-toolbar">
-      <button id="text-toolbar-clear" class="lsf misc" translate="no">clear</button>
-      <button id="text-toolbar-lock" class="lsf misc" translate="no">lock</button>
-      <button id="text-toolbar-reverse" class="lsf misc" translate="no">sync</button>
-      <button id="text-toolbar-color" class="lsf misc" translate="no">color</button>
+      <button id="text-toolbar-clear" class="lsf func" translate="no">clear</button>
+      <button id="text-toolbar-lock" class="lsf func" translate="no">lock</button>
+      <button id="text-toolbar-reverse" class="lsf func" translate="no">sync</button>
+      <button id="text-toolbar-color" class="lsf config" translate="no">color</button>
+      <button id="text-toolbar-bold" class="lsf config" translate="no">bold</button>
       <button id="text-toolbar-expand" class="lsf expand" translate="no">plus</button>
       <button id="text-toolbar-shrink" class="lsf shrink" translate="no">minus</button>
     </div>
-    <textarea id="text-content" class="black-white"></textarea>
+    <textarea id="text-content" class="black-white weight-normal"></textarea>
   </div>
   <script src="index.js"></script>
 </body>

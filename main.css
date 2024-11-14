@@ -53,9 +53,14 @@ button.shrink {
   background-color: #80FFFF;
 }
 
-button.misc {
+button.func {
   color: black;
   background-color: #80FF80;
+}
+
+button.config {
+  color: black;
+  background-color: #FFFF80;
 }
 
 /* ==================== Specific styles ==================== */
@@ -85,10 +90,10 @@ button.misc {
 }
 
 #text-toolbar button {
-  width: 15vw; /* 6 buttons in the toolbar */
+  width: 13vw; /* 7 buttons in the toolbar */
   margin: 0;
   padding: 2px;
-  font-size: 36px; /* large enough on smartphones */
+  font-size: 30px; /* large enough on smartphones */
 }
 
 #text-content {
@@ -106,6 +111,14 @@ button.misc {
 
 .rotate-backward {
   animation: rotation-backward 500ms forwards;
+}
+
+.weight-normal {
+  font-weight: normal;
+}
+
+.weight-bold {
+  font-weight: bold;
 }
 
 @keyframes rotation-forward {

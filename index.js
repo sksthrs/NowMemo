@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
   const lockButton = document.getElementById('text-toolbar-lock')
   const reverseButton = document.getElementById('text-toolbar-reverse')
   const colorButton = document.getElementById('text-toolbar-color')
+  const boldButton = document.getElementById('text-toolbar-bold')
   const expandButton = document.getElementById('text-toolbar-expand')
   const shrinkButton = document.getElementById('text-toolbar-shrink')
   const textArea = document.getElementById('text-content')
@@ -66,7 +67,19 @@ document.addEventListener('DOMContentLoaded', (ev) => {
       if (textArea.classList.contains(classes[i])) {
         textArea.classList.remove(classes[i])
         textArea.classList.add(classes[(i+1) % len])
-        console.log(`[${i}] remove ${classes[i]} add ${classes[(i+1) % len]}`)
+        // console.log(`[${i}] remove ${classes[i]} add ${classes[(i+1) % len]}`)
+        break
+      }
+    }
+  })
+
+  boldButton.addEventListener('click', (ev) => {
+    const classes = ['weight-normal', 'weight-bold']
+    const len = classes.length
+    for (let i=0 ; i<len ; i++) {
+      if (textArea.classList.contains(classes[i])) {
+        textArea.classList.remove(classes[i])
+        textArea.classList.add(classes[(i+1) % len])
         break
       }
     }
