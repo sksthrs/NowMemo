@@ -94,8 +94,10 @@ document.addEventListener('DOMContentLoaded', (ev) => {
         console.log(`config loaded : ${JSON.stringify(config)}`)
         return config
       }
-    } catch(err) {}
-    console.log(`error in config-load : ${err}`)
+    } catch(err) {
+      console.log(`error in config-load : ${err}`)
+    }
+    console.log('no config')
     return {}
   }
 
