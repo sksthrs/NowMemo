@@ -1,4 +1,4 @@
-const cacheName = 'NowMemo-v1.2.3'
+const cacheName = 'NowMemo-v1.2.4'
 const cacheUrls = [
   './',
   'index.html',
