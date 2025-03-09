@@ -1,0 +1,15 @@
+{
+  "name": "nowmemo",
+  "version": "1.2.4",
+  "description": "筆談などに使うための、超シンプルなメモ帳（保存機能なし） Memo app without save, just for telling by writing",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mekiku.com",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
